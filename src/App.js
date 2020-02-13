@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import LeftColumnContainer from './Containers/LeftColumnContainer'
+import RightColumnContainer from './Containers/RightColumnContainer'
+import MyForm from './Components/MyForm'
+import Logo from './images/GiantRobotLTD_Logo.svg'
+
+import './App.scss'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <LeftColumnContainer>
+        <img className="logo" src={Logo} alt=""/>
+        <h1 className="title">Welcome</h1>
+        <p className="body">Please tell us a bit about yourself to get started.</p>
+      </LeftColumnContainer>
+      <RightColumnContainer>
+        <MyForm />
+      </RightColumnContainer>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
